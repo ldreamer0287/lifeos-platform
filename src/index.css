@@ -1,0 +1,118 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(120, 119, 198, 0.15);
+  border-radius: 99px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 119, 198, 0.3);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.light .glass-panel {
+  background: rgba(9, 9, 11, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(9, 9, 11, 0.08);
+  box-shadow: 0 10px 30px 0 rgba(9, 9, 11, 0.03);
+}
+
+.glass-widget {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+}
+
+.light .glass-widget {
+  background: rgba(9, 9, 11, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(9, 9, 11, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(9, 9, 11, 0.04);
+  border-radius: 32px;
+}
+
+.glass-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  color: #f1f5f9;
+}
+
+.light .glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(9, 9, 11, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  color: #1e293b;
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.light .glass-btn {
+  background: rgba(9, 9, 11, 0.04);
+  border: 1px solid rgba(9, 9, 11, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+}
+
+.light .glass-btn:hover {
+  background: rgba(9, 9, 11, 0.08);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
